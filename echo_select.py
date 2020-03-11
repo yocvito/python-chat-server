@@ -2,6 +2,10 @@ import socket
 import sys
 import select
 
+# GLOBAL VARS
+max_buff_len = 1500
+port = 7777
+
 
 class Client:
     """
@@ -37,6 +41,34 @@ class Client:
 
 def usage(cmd):
     print("Usage: {} <mode=tcp|udp>".format(cmd))
+
+
+def disconnect(client, all_clients, msg, broadcast):
+    """
+    disconnect a client from the server and send a message to all other clients
+    :param client: the client to disconnect
+    :param all_clients: list of all clients on server
+    :param msg: array containing all words of the message
+    :param broadcast: specify if msg will be send to all client or not
+    :return: list without the disconnected Client object
+    """
+    print("{} disconnected".format(client.getsocket().getpeername()))
+    if broadcast:
+        for oc in all_clients:
+            if oc.getsocket() != all_clients[0].getsocket() and oc != client:
+                if len(msg) == 0:
+                    oc.getsocket().sendall("Client {} disconnected\n".format(client.getnick()).encode("utf-8"))
+                else:
+                    oc.getsocket().sendall("{}: {} --> disconnected\n".format(client.getnick(), msg).encode("utf-8"))
+    else:
+        if len(msg) == 0:
+            client.getsocket().sendall(
+                "You have been disconnected from the server\n".format(client.getnick()).encode("utf-8"))
+        else:
+            client.getsocket().sendall("You have been kicked:{}\n".format(msg).encode("utf-8"))
+    all_clients.remove(client)
+    client.getsocket().close()
+    return all_clients
 
 
 def tcp_serv(port):
@@ -82,7 +114,7 @@ def tcp_serv(port):
                                                 if i == 1:
                                                     # put name at line beginning
                                                     data = "{}: ".format(current_client.getnick())
-                                                    data = data+cmd[i]
+                                                    data = data + cmd[i]
                                                 else:
                                                     data = data + " " + cmd[i]
                                         data = data + "\n"
@@ -101,22 +133,33 @@ def tcp_serv(port):
                                 data = "List of connected users:\n"
                                 for oc in inputs:
                                     if oc.getsocket() is not server:
-                                        data += oc.getnick()+"\n"
+                                        data += oc.getnick() + "\n"
                                 t.sendall(data.encode("utf-8"))
                             elif cmd[0].upper() == "QUIT":
-
-
+                                msg = ""
+                                for i in range(len(cmd)):
+                                    if i != 0:
+                                        msg += " " + cmd[i]
+                                inputs = disconnect(current_client, inputs, msg, True)
+                            elif cmd[0].upper() == "KILL":
+                                if len(cmd) >= 3:
+                                    msg = ""
+                                    for i in range(len(cmd)):
+                                        if i > 1:
+                                            msg += " " + cmd[i]
+                                    for oc in inputs:
+                                        if oc.getnick() == cmd[1]:
+                                            ctodisc = oc
+                                            inputs = disconnect(ctodisc, inputs, msg, False)
+                                else:
+                                    current_client.getsocket().sendall(
+                                        "Error: command bad usage\nUsage: KILL <nick> <message>\n".encode("utf-8"))
                             else:
                                 t.sendall("Invalid command\n".encode("utf-8"))
                         except IndexError:
                             continue
                     else:
-                        print("{} disconnected".format(t.getpeername()))
-                        for oc in inputs:
-                            if oc.getsocket() != server and oc != t:
-                                oc.getsocket().sendall("Client {} disconnected\n".format(current_client.getnick()).encode("utf-8"))
-                        inputs.remove(current_client)
-                        t.close()
+                        inputs = disconnect(current_client, inputs, "", True)
     except KeyboardInterrupt:
         exit(1)
 
@@ -137,10 +180,6 @@ def udp_serv(port):
     except KeyboardInterrupt:
         exit(1)
 
-
-max_buff_len = 1500
-
-port = 7777
 
 if len(sys.argv) > 2 or len(sys.argv) < 1:
     usage(sys.argv[0])

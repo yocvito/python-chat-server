@@ -20,13 +20,13 @@ class Client:
         if nick:
             self.nick = nick
         else:
-            self.nick = socket.getpeername()
+            self.nick = str(socket.getpeername())
 
     def getsocket(self):
         return self.socket
 
     def getnick(self):
-        return self.nick
+        return str(self.nick)
 
     def setsocket(self, socket):
         self.socket = socket
@@ -48,39 +48,64 @@ def tcp_serv(port):
         print(e)
         exit(1)
 
-    inputs = [server]
+    inputs = [Client(server, "server")]
     outputs = []
 
     server.listen(10)
     try:
         while True:
-            r_list, w_list, x_list = select.select(inputs, [], [])
+            r_list, w_list, x_list = select.select([x.getsocket() for x in inputs], [], [])
             for t in r_list:
+                for cs in inputs:
+                    if cs.getsocket() is t:
+                        current_client = cs
                 if t is server:
                     client, addr = t.accept()
                     print("{} connected".format(addr))
                     client.setblocking(0)
-                    inputs.append(client)
+                    c = Client(client, addr)
+                    inputs.append(c)
                 else:
                     payload = t.recv(max_buff_len)
                     if payload != b"":
                         cmd = payload.decode().split()
                         try:
+                            data = ""
                             # command match cases
                             if cmd[0].upper() == "MSG":
                                 # send message to all sockets except socket source
                                 for oc in inputs:
                                     # concatenate all msg and send data
-                                    if oc != server and oc != t:
-                                        data = ""
+                                    if oc.getsocket() != server and oc.getsocket() != t:
+                                        for i in range(len(cmd)):
+                                            if i != 0:
+                                                if i == 1:
+                                                    # put name at line beginning
+                                                    data = "{}: ".format(current_client.getnick())
+                                                    data = data+cmd[i]
+                                                else:
+                                                    data = data + " " + cmd[i]
+                                        data = data + "\n"
+                                        oc.socket.sendall(data.encode("utf-8"))
+                            elif cmd[0].upper() == "NICK":
+                                for oc in inputs:
+                                    if oc.getsocket() is t:
                                         for i in range(len(cmd)):
                                             if i != 0:
                                                 if i == 1:
                                                     data = cmd[i]
                                                 else:
                                                     data = data + " " + cmd[i]
-                                        data = data + "\n"
-                                        oc.sendall(data.encode("utf-8"))
+                                        oc.setnick(data)
+                            elif cmd[0].upper() == "WHO":
+                                data = "List of connected users:\n"
+                                for oc in inputs:
+                                    if oc.getsocket() is not server:
+                                        data += oc.getnick()+"\n"
+                                t.sendall(data.encode("utf-8"))
+                            elif cmd[0].upper() == "QUIT":
+
+
                             else:
                                 t.sendall("Invalid command\n".encode("utf-8"))
                         except IndexError:
@@ -88,9 +113,9 @@ def tcp_serv(port):
                     else:
                         print("{} disconnected".format(t.getpeername()))
                         for oc in inputs:
-                            if oc != server and oc != t:
-                                oc.sendall("Client {} disconnected".format(t.getpeername()).encode("utf-8"))
-                        inputs.remove(t)
+                            if oc.getsocket() != server and oc != t:
+                                oc.getsocket().sendall("Client {} disconnected\n".format(current_client.getnick()).encode("utf-8"))
+                        inputs.remove(current_client)
                         t.close()
     except KeyboardInterrupt:
         exit(1)

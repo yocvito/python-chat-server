@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="591e79dc-13b4-4284-b446-2268593f99ee" name="Default" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="prog_reseau" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-3" />
+    <option name="y" value="31" />
+    <option name="width" value="1926" />
+    <option name="height" value="1131" />
+  </component>
+  <component name="ProjectId" id="1YzXqZm8HfmmdI1HK4DFoFkmr0V" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/echo_select.py" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="prog_reseau" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration name="echo_select.py" type="PythonConfigurationType" factoryName="Python">
+      <module name="prog_reseau" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/echo_select.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="591e79dc-13b4-4284-b446-2268593f99ee" name="Default" comment="" />
+      <created>1582546996881</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582546996881</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="141" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583946703075">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state x="141" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.31.1366.737@0.31.1366.737" timestamp="1583946703075" />
+    <state x="466" y="157" width="434" height="487" key="FileChooserDialogImpl" timestamp="1583946692017">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state x="466" y="157" width="434" height="487" key="FileChooserDialogImpl/0.31.1366.737@0.31.1366.737" timestamp="1583946692017" />
+    <state width="1313" height="208" key="GridCell.Tab.0.bottom" timestamp="1583948301631">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state width="1313" height="208" key="GridCell.Tab.0.bottom/0.31.1366.737@0.31.1366.737" timestamp="1583948301631" />
+    <state width="1313" height="208" key="GridCell.Tab.0.center" timestamp="1583948301630">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state width="1313" height="208" key="GridCell.Tab.0.center/0.31.1366.737@0.31.1366.737" timestamp="1583948301630" />
+    <state width="1313" height="208" key="GridCell.Tab.0.left" timestamp="1583948301629">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state width="1313" height="208" key="GridCell.Tab.0.left/0.31.1366.737@0.31.1366.737" timestamp="1583948301629" />
+    <state width="1313" height="208" key="GridCell.Tab.0.right" timestamp="1583948301630">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state width="1313" height="208" key="GridCell.Tab.0.right/0.31.1366.737@0.31.1366.737" timestamp="1583948301630" />
+    <state x="172" y="35" width="1022" height="733" key="SettingsEditor" timestamp="1583946653061">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state x="172" y="35" width="1022" height="733" key="SettingsEditor/0.31.1366.737@0.31.1366.737" timestamp="1583946653061" />
+    <state x="343" y="227" key="com.intellij.ide.util.TipDialog" timestamp="1583946609514">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state x="343" y="227" key="com.intellij.ide.util.TipDialog/0.31.1366.737@0.31.1366.737" timestamp="1583946609514" />
+  </component>
+</project>

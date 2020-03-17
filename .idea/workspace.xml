@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="591e79dc-13b4-4284-b446-2268593f99ee" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/echo_select.py" beforeDir="false" afterPath="$PROJECT_DIR$/echo_select.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/echo_select_bonus.py" beforeDir="false" afterPath="$PROJECT_DIR$/echo_select_bonus.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +34,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/echo_select.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/echo_select_bonus.py" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.echo_select_bonus.py">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -57,6 +57,27 @@
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <method />
+    </configuration>
+    <configuration name="echo_select_bonus.py" type="PythonConfigurationType" factoryName="Python">
+      <module name="prog_reseau" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/echo_select_bonus.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="echo_select.py" type="PythonConfigurationType" factoryName="Python">
       <module name="prog_reseau" />
@@ -79,6 +100,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.echo_select.py" />
+      <item itemvalue="Python.echo_select_bonus.py" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -102,30 +127,30 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="141" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583946703075">
+    <state x="141" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584088931644">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state x="141" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.31.1366.737@0.31.1366.737" timestamp="1583946703075" />
-    <state x="466" y="157" width="434" height="487" key="FileChooserDialogImpl" timestamp="1583946692017">
+    <state x="141" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.31.1366.737@0.31.1366.737" timestamp="1584088931644" />
+    <state x="466" y="157" width="434" height="487" key="FileChooserDialogImpl" timestamp="1584088928433">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state x="466" y="157" width="434" height="487" key="FileChooserDialogImpl/0.31.1366.737@0.31.1366.737" timestamp="1583946692017" />
-    <state width="1343" height="79" key="GridCell.Tab.0.bottom" timestamp="1584050295213">
+    <state x="466" y="157" width="434" height="487" key="FileChooserDialogImpl/0.31.1366.737@0.31.1366.737" timestamp="1584088928433" />
+    <state width="1343" height="143" key="GridCell.Tab.0.bottom" timestamp="1584113932937">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1343" height="79" key="GridCell.Tab.0.bottom/0.31.1366.737@0.31.1366.737" timestamp="1584050295213" />
-    <state width="1343" height="79" key="GridCell.Tab.0.center" timestamp="1584050295211">
+    <state width="1343" height="143" key="GridCell.Tab.0.bottom/0.31.1366.737@0.31.1366.737" timestamp="1584113932937" />
+    <state width="1343" height="143" key="GridCell.Tab.0.center" timestamp="1584113932934">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1343" height="79" key="GridCell.Tab.0.center/0.31.1366.737@0.31.1366.737" timestamp="1584050295211" />
-    <state width="1343" height="79" key="GridCell.Tab.0.left" timestamp="1584050295210">
+    <state width="1343" height="143" key="GridCell.Tab.0.center/0.31.1366.737@0.31.1366.737" timestamp="1584113932934" />
+    <state width="1343" height="143" key="GridCell.Tab.0.left" timestamp="1584113932933">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1343" height="79" key="GridCell.Tab.0.left/0.31.1366.737@0.31.1366.737" timestamp="1584050295210" />
-    <state width="1343" height="79" key="GridCell.Tab.0.right" timestamp="1584050295212">
+    <state width="1343" height="143" key="GridCell.Tab.0.left/0.31.1366.737@0.31.1366.737" timestamp="1584113932933" />
+    <state width="1343" height="143" key="GridCell.Tab.0.right" timestamp="1584113932935">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
-    <state width="1343" height="79" key="GridCell.Tab.0.right/0.31.1366.737@0.31.1366.737" timestamp="1584050295212" />
+    <state width="1343" height="143" key="GridCell.Tab.0.right/0.31.1366.737@0.31.1366.737" timestamp="1584113932935" />
     <state width="1313" height="199" key="GridCell.Tab.1.bottom" timestamp="1583972937588">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
@@ -150,6 +175,10 @@
       <screen x="0" y="31" width="1366" height="737" />
     </state>
     <state x="343" y="227" key="com.intellij.ide.util.TipDialog/0.31.1366.737@0.31.1366.737" timestamp="1583950401295" />
+    <state x="0" y="31" width="698" height="737" key="find.popup" timestamp="1584112649888">
+      <screen x="0" y="31" width="1366" height="737" />
+    </state>
+    <state x="0" y="31" width="698" height="737" key="find.popup/0.31.1366.737@0.31.1366.737" timestamp="1584112649888" />
     <state x="427" y="42" width="511" height="719" key="refactoring.ChangeSignatureDialog" timestamp="1584025669623">
       <screen x="0" y="31" width="1366" height="737" />
     </state>
